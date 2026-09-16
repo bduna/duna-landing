@@ -199,18 +199,18 @@ fbq('track', 'PageView');
   .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 26px; animation: rise 1.2s var(--ease-out) .38s both; }
   .actions > * { pointer-events: auto; }
   /* A dark edge so the control keeps a boundary when a near-white card drifts under it */
-  .cta { min-height: 58px; padding: 0 9px 0 30px; gap: 16px; border-radius: 999px; border: 1.5px solid rgb(5 10 24 / .9); box-shadow: 0 14px 34px rgb(var(--veil) / .55); }
+  .cta { min-height: 62px; padding: 0 10px 0 32px; gap: 18px; font-size: clamp(18px, .3vw + 17px, 21px); border-radius: 999px; border: 1.5px solid rgb(5 10 24 / .9); box-shadow: 0 14px 34px rgb(var(--veil) / .55); }
+  .cta .badge { width: 42px; height: 42px; }
   .btn-white { background: #fff; color: var(--ground); }
   .btn-white:hover { background: #e9edf5; }
-  /* The arrow sits in its own dark disc at the end of the pill, and nods so the eye reads "scroll" */
+  /* The arrow sits in its own dark disc at the end of the pill */
   .cta .badge {
     display: inline-flex; align-items: center; justify-content: center;
     width: 40px; height: 40px; border-radius: 50%; flex: none;
     background: var(--ground); color: #fff;
     transition: transform .25s var(--ease-out), background-color .2s var(--ease-out);
   }
-  .cta .badge svg { width: 22px; height: 22px; animation: nod 1.8s ease-in-out infinite; }
-  @keyframes nod { 0%, 100% { transform: translateY(-1px); } 50% { transform: translateY(3px); } }
+  .cta .badge svg { width: 22px; height: 22px; }
   .cta:hover .badge, .cta:focus-visible .badge { transform: scale(1.08); background: #1a2340; }
   @keyframes rise { from { opacity: .15; transform: translateY(.45em); } }
 
@@ -239,7 +239,6 @@ fbq('track', 'PageView');
   @media (prefers-reduced-motion: reduce) {
     .brand, .headline > span, .sub, .actions { animation: none; }
     .cta, .cta .badge { transition: none; }
-    .cta .badge svg { animation: none; }
   }
 
   /* ---------- Sections ---------- */
