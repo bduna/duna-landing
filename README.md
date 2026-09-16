@@ -22,7 +22,7 @@ There is no form. Every call to action is a text, a call, or an email:
 - Call: `tel:+17073855673`.
 - Email: `mailto:barrett@dunamarketing.com` with a prefilled subject and first line.
 
-On a phone the hero button opens the messages app directly. On a computer it scrolls to the contact section, which
+The hero has one white "Get started" button that scrolls to the "see it before you pay" section. The contact section
 also has copy buttons for the number and the email. To change the number or address, search the page for
 `7073855673` and `barrett@dunamarketing.com`.
 

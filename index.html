@@ -199,17 +199,11 @@ fbq('track', 'PageView');
   .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 26px; animation: rise 1.2s var(--ease-out) .38s both; }
   .actions > * { pointer-events: auto; }
   /* A dark edge so the control keeps a boundary when a near-white card drifts under it */
-  .cta { min-height: 56px; padding: 0 28px; border: 2px solid var(--ground); box-shadow: 0 0 0 1px rgb(255 255 255 / .35), 0 14px 34px rgb(var(--veil) / .55); }
+  .cta { min-height: 56px; padding: 0 30px; border: 1.5px solid rgb(5 10 24 / .9); box-shadow: 0 14px 34px rgb(var(--veil) / .55); }
+  .btn-white { background: #fff; color: var(--ground); }
+  .btn-white:hover { background: #e9edf5; }
   .cta svg { width: 19px; height: 19px; flex: none; transition: transform .25s var(--ease-out); }
-  .cta:hover svg, .cta:focus-visible svg { transform: translateX(.22em); }
-  .hero-link {
-    color: var(--ink); font-weight: 600; font-size: clamp(15px, .2vw + 14px, 17px);
-    text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1.5px;
-    text-shadow: 0 .04em .5em rgb(var(--veil) / .8);
-    padding: 8px 2px;
-  }
-  .hero-link:hover { color: var(--gold); }
-  .hero-link:focus-visible { outline: 2px solid #fff; outline-offset: 4px; border-radius: 3px; }
+  .cta:hover svg, .cta:focus-visible svg { transform: translateY(.18em); }
   @keyframes rise { from { opacity: .15; transform: translateY(.45em); } }
 
   /* Static tilted grid for browsers without WebGL2 */
@@ -350,9 +344,7 @@ fbq('track', 'PageView');
       <p class="sub">Answer one questionnaire. See your finished site tomorrow. Pay only if you love it.</p>
     </div>
     <div class="actions">
-      <a class="btn cta" id="hero-cta" href="#start" data-sms="sms:+17073855673?&amp;body=Hi%20Barrett%2C%20I%27d%20like%20to%20start%20a%20website.%20My%20business%3A%20">Text us to start<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="hero-link" href="tel:+17073855673">Call (707) 385-5673</a>
-      <a class="hero-link" href="#samples">See the samples</a>
+      <a class="btn btn-white cta" id="hero-cta" href="#before-you-pay">Get started<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
     </div>
     <p class="visually-hidden" id="sites"></p>
   </div>
@@ -545,9 +537,6 @@ fbq('track', 'PageView');
 
 <script>
 (() => {
-  // On a phone the hero button opens the messages app; on a computer it scrolls to the contact options.
-  const cta = document.getElementById('hero-cta');
-  if (cta && matchMedia('(pointer: coarse)').matches && /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) cta.href = cta.dataset.sms;
   // A tap on text, call, or email is the conversion this page exists for.
   document.addEventListener('click', e => {
     const a = e.target.closest('a[href^="sms:"], a[href^="tel:"], a[href^="mailto:"]');
