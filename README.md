@@ -43,5 +43,5 @@ Add `?metrics=off` to the address once on a browser you use for testing and that
 ## Changing a sample
 
 Each sample has three images: the two tall wall textures in `assets/img/samples/` (`<name>-960.webp` at 960x2400 and
-`<name>-640.webp` at 640x1600) and the phone first-screen card in `assets/img/folds/` (`<name>.webp` at 520x1125, a
-390x844 phone capture at 2x with the sticky bottom bar hidden, then scaled down). The Keyway Locksmith screenshot still says "colour" and should be regenerated.
+`<name>-640.webp` at 640x1600) and the first-screen card in `assets/img/folds/` (`<name>.webp` at 800x600, a 1280x960 laptop capture with the
+sticky bottom bar hidden, then scaled down). The Keyway Locksmith screenshot still says "colour" and should be regenerated.
