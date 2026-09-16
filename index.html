@@ -240,28 +240,25 @@ fbq('track', 'PageView');
 
   /* ---------- Sections ---------- */
   .samples-grid {
-    display: grid; gap: 22px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: grid; gap: 18px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     margin-top: 36px;
   }
-  @media (max-width: 900px) { .samples-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 560px) { .samples-grid { grid-template-columns: 1fr; } }
-  .samples-grid .more { display: none; }
-  .samples-grid.expanded .more { display: block; }
+  @media (max-width: 760px) { .samples-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } }
   .card {
     display: block; text-decoration: none; color: inherit;
     border-radius: 12px; overflow: hidden;
     background: #111a33;
+    border: 1px solid rgb(255 255 255 / .1);
     box-shadow: 0 18px 40px rgb(0 0 0 / .45);
     transition: transform .25s var(--ease-out), box-shadow .25s var(--ease-out);
   }
   .card:hover { transform: translateY(-4px); box-shadow: 0 26px 50px rgb(0 0 0 / .55); }
   .card:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
-  .card .shot { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: top; background: #1a2340; }
-  .card .meta { padding: 14px 16px 16px; }
-  .card .meta strong { display: block; font-size: 17px; font-weight: 700; letter-spacing: -.01em; }
-  .card .meta span { display: block; margin-top: 3px; font-size: 14px; color: var(--ink-dim); }
-  .samples-toggle { margin-top: 28px; }
+  .card .shot { display: block; width: 100%; height: auto; aspect-ratio: 520 / 1125; object-fit: cover; object-position: top; background: #1a2340; }
+  .card .meta { padding: 10px 12px 12px; }
+  .card .meta strong { display: block; font-size: clamp(12px, .5vw + 7px, 14px); font-weight: 700; letter-spacing: -.01em; line-height: 1.25; }
+  .card .meta span { display: block; margin-top: 3px; font-size: 12px; line-height: 1.35; color: var(--ink-dim); }
 
   .steps { display: grid; gap: 28px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 40px; counter-reset: step; }
   @media (max-width: 760px) { .steps { grid-template-columns: 1fr; gap: 22px; } }
@@ -372,50 +369,49 @@ fbq('track', 'PageView');
   <div class="wrap">
     <p class="eyebrow">Samples</p>
     <h2>Ten sample businesses. Ten different websites.</h2>
-    <p class="lede">Each one was built from a filled-in questionnaire and the photos that came with it. Tap any site to open it.</p>
+    <p class="lede">Each one was built from a filled-in questionnaire and the photos that came with it. This is the first screen on a phone. Tap any site to open it.</p>
     <div class="samples-grid" id="samples-grid">
       <a class="card" href="https://dunamarketing.com/portfolio/long-table-catering/" target="_blank" rel="noopener">
-        <img class="shot" src="assets/img/samples/long-table-catering-640.webp" alt="Long Table Catering website, top of the home page" width="640" height="480" loading="lazy" decoding="async">
+        <img class="shot" src="assets/img/folds/long-table-catering.webp" alt="Long Table Catering website, first screen on a phone" width="520" height="1125" loading="lazy" decoding="async">
         <span class="meta"><strong>Long Table Catering</strong><span>Catering, Sonoma, CA</span></span>
       </a>
       <a class="card" href="https://dunamarketing.com/portfolio/mirror-finish-auto-detailing/" target="_blank" rel="noopener">
-        <img class="shot" src="assets/img/samples/mirror-finish-auto-detailing-640.webp" alt="Mirror Finish Auto Detailing website, top of the home page" width="640" height="480" loading="lazy" decoding="async">
+        <img class="shot" src="assets/img/folds/mirror-finish-auto-detailing.webp" alt="Mirror Finish Auto Detailing website, first screen on a phone" width="520" height="1125" loading="lazy" decoding="async">
         <span class="meta"><strong>Mirror Finish Auto Detailing</strong><span>Auto detailing, Tampa, FL</span></span>
       </a>
       <a class="card" href="https://dunamarketing.com/portfolio/bright-beginnings-preschool/" target="_blank" rel="noopener">
-        <img class="shot" src="assets/img/samples/bright-beginnings-preschool-640.webp" alt="Bright Beginnings Preschool website, top of the home page" width="640" height="480" loading="lazy" decoding="async">
+        <img class="shot" src="assets/img/folds/bright-beginnings-preschool.webp" alt="Bright Beginnings Preschool website, first screen on a phone" width="520" height="1125" loading="lazy" decoding="async">
         <span class="meta"><strong>Bright Beginnings Preschool</strong><span>Preschool, Fort Wayne, IN</span></span>
       </a>
-      <a class="card more" href="https://dunamarketing.com/portfolio/marden-estate-law/" target="_blank" rel="noopener">
-        <img class="shot" src="assets/img/samples/marden-estate-law-640.webp" alt="Marden Estate Law website, top of the home page" width="640" height="480" loading="lazy" decoding="async">
+      <a class="card" href="https://dunamarketing.com/portfolio/marden-estate-law/" target="_blank" rel="noopener">
+        <img class="shot" src="assets/img/folds/marden-estate-law.webp" alt="Marden Estate Law website, first screen on a phone" width="520" height="1125" loading="lazy" decoding="async">
         <span class="meta"><strong>Marden Estate Law</strong><span>Estate law, San Diego, CA</span></span>
       </a>
-      <a class="card more" href="https://dunamarketing.com/portfolio/velvet-fig/" target="_blank" rel="noopener">
-        <img class="shot" src="assets/img/samples/velvet-fig-640.webp" alt="Velvet Fig website, top of the home page" width="640" height="480" loading="lazy" decoding="async">
+      <a class="card" href="https://dunamarketing.com/portfolio/velvet-fig/" target="_blank" rel="noopener">
+        <img class="shot" src="assets/img/folds/velvet-fig.webp" alt="Velvet Fig website, first screen on a phone" width="520" height="1125" loading="lazy" decoding="async">
         <span class="meta"><strong>Velvet Fig</strong><span>Cocktail bar, New Orleans, LA</span></span>
       </a>
-      <a class="card more" href="https://dunamarketing.com/portfolio/keyway-locksmith/" target="_blank" rel="noopener">
-        <img class="shot" src="assets/img/samples/keyway-locksmith-640.webp" alt="Keyway Locksmith website, top of the home page" width="640" height="480" loading="lazy" decoding="async">
+      <a class="card" href="https://dunamarketing.com/portfolio/keyway-locksmith/" target="_blank" rel="noopener">
+        <img class="shot" src="assets/img/folds/keyway-locksmith.webp" alt="Keyway Locksmith website, first screen on a phone" width="520" height="1125" loading="lazy" decoding="async">
         <span class="meta"><strong>Keyway Locksmith</strong><span>Locksmith, Denver, CO</span></span>
       </a>
-      <a class="card more" href="https://dunamarketing.com/portfolio/golden-crumb-bakery/" target="_blank" rel="noopener">
-        <img class="shot" src="assets/img/samples/golden-crumb-bakery-640.webp" alt="Golden Crumb Bakery website, top of the home page" width="640" height="480" loading="lazy" decoding="async">
+      <a class="card" href="https://dunamarketing.com/portfolio/golden-crumb-bakery/" target="_blank" rel="noopener">
+        <img class="shot" src="assets/img/folds/golden-crumb-bakery.webp" alt="Golden Crumb Bakery website, first screen on a phone" width="520" height="1125" loading="lazy" decoding="async">
         <span class="meta"><strong>Golden Crumb Bakery</strong><span>Bakery, Petaluma, CA</span></span>
       </a>
-      <a class="card more" href="https://dunamarketing.com/portfolio/waggin-tails-grooming/" target="_blank" rel="noopener">
-        <img class="shot" src="assets/img/samples/waggin-tails-grooming-640.webp" alt="Waggin&amp;rsquo; Tails Grooming website, top of the home page" width="640" height="480" loading="lazy" decoding="async">
-        <span class="meta"><strong>Waggin&amp;rsquo; Tails Grooming</strong><span>Dog grooming, Madison, WI</span></span>
+      <a class="card" href="https://dunamarketing.com/portfolio/waggin-tails-grooming/" target="_blank" rel="noopener">
+        <img class="shot" src="assets/img/folds/waggin-tails-grooming.webp" alt="Waggin&rsquo; Tails Grooming website, first screen on a phone" width="520" height="1125" loading="lazy" decoding="async">
+        <span class="meta"><strong>Waggin&rsquo; Tails Grooming</strong><span>Dog grooming, Madison, WI</span></span>
       </a>
-      <a class="card more" href="https://dunamarketing.com/portfolio/summit-ridge-ski-board/" target="_blank" rel="noopener">
-        <img class="shot" src="assets/img/samples/summit-ridge-ski-board-640.webp" alt="Summit Ridge Ski &amp; Board website, top of the home page" width="640" height="480" loading="lazy" decoding="async">
+      <a class="card" href="https://dunamarketing.com/portfolio/summit-ridge-ski-board/" target="_blank" rel="noopener">
+        <img class="shot" src="assets/img/folds/summit-ridge-ski-board.webp" alt="Summit Ridge Ski &amp; Board website, first screen on a phone" width="520" height="1125" loading="lazy" decoding="async">
         <span class="meta"><strong>Summit Ridge Ski &amp; Board</strong><span>Ski and snowboard rentals, Breckenridge, CO</span></span>
       </a>
-      <a class="card more" href="https://dunamarketing.com/portfolio/maple-street-cleaners/" target="_blank" rel="noopener">
-        <img class="shot" src="assets/img/samples/maple-street-cleaners-640.webp" alt="Maple Street Cleaners website, top of the home page" width="640" height="480" loading="lazy" decoding="async">
+      <a class="card" href="https://dunamarketing.com/portfolio/maple-street-cleaners/" target="_blank" rel="noopener">
+        <img class="shot" src="assets/img/folds/maple-street-cleaners.webp" alt="Maple Street Cleaners website, first screen on a phone" width="520" height="1125" loading="lazy" decoding="async">
         <span class="meta"><strong>Maple Street Cleaners</strong><span>Dry cleaning, Cincinnati, OH</span></span>
       </a>
     </div>
-    <button class="btn btn-ghost samples-toggle" type="button" id="samples-toggle" aria-expanded="false" aria-controls="samples-grid">See all ten</button>
   </div>
 </section>
 
@@ -561,12 +557,6 @@ fbq('track', 'PageView');
   document.querySelectorAll('.copy-btn').forEach(b => b.addEventListener('click', async () => {
     try { await navigator.clipboard.writeText(b.dataset.copy); b.classList.add('done'); const t = b.textContent; b.textContent = 'Copied'; setTimeout(() => { b.textContent = t; b.classList.remove('done'); }, 1800); } catch (e) {}
   }));
-  const grid = document.getElementById('samples-grid'), btn = document.getElementById('samples-toggle');
-  btn.addEventListener('click', () => {
-    const open = grid.classList.toggle('expanded');
-    btn.setAttribute('aria-expanded', String(open));
-    btn.textContent = open ? 'Show fewer' : 'See all ten';
-  });
 })();
 </script>
 <script>
