@@ -86,6 +86,7 @@ fbq('track', 'PageView');
     overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
   }
   .wrap { max-width: 1120px; margin: 0 auto; }
+  .wrap-wide { max-width: 1320px; }
   .band { padding: clamp(56px, 9vw, 120px) var(--gutter); }
   .band-dark { background: var(--band); color: var(--ink); }
   .band-light { background: var(--paper); color: var(--navy); }
@@ -255,7 +256,7 @@ fbq('track', 'PageView');
   }
   .card:hover { transform: translateY(-4px); box-shadow: 0 26px 50px rgb(0 0 0 / .55); }
   .card:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
-  .card .shot { display: block; width: 100%; height: auto; aspect-ratio: 520 / 1125; object-fit: cover; object-position: top; background: #1a2340; }
+  .card .shot { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: top; background: #1a2340; }
   .card .meta { padding: 10px 12px 12px; }
   .card .meta strong { display: block; font-size: clamp(12px, .5vw + 7px, 14px); font-weight: 700; letter-spacing: -.01em; line-height: 1.25; }
   .card .meta span { display: block; margin-top: 3px; font-size: 12px; line-height: 1.35; color: var(--ink-dim); }
@@ -366,49 +367,49 @@ fbq('track', 'PageView');
 </section>
 
 <section class="band band-dark" id="samples">
-  <div class="wrap">
+  <div class="wrap wrap-wide">
     <p class="eyebrow">Samples</p>
     <h2>Ten sample businesses. Ten different websites.</h2>
-    <p class="lede">Each one was built from a filled-in questionnaire and the photos that came with it. This is the first screen on a phone. Tap any site to open it.</p>
+    <p class="lede">Each one was built from a filled-in questionnaire and the photos that came with it. This is the first screen of each one. Tap any site to open it.</p>
     <div class="samples-grid" id="samples-grid">
       <a class="card" href="https://dunamarketing.com/portfolio/long-table-catering/" target="_blank" rel="noopener">
-        <img class="shot" src="assets/img/folds/long-table-catering.webp" alt="Long Table Catering website, first screen on a phone" width="520" height="1125" loading="lazy" decoding="async">
+        <img class="shot" src="assets/img/folds/long-table-catering.webp" alt="Long Table Catering website, first screen on a laptop" width="800" height="600" loading="lazy" decoding="async">
         <span class="meta"><strong>Long Table Catering</strong><span>Catering, Sonoma, CA</span></span>
       </a>
       <a class="card" href="https://dunamarketing.com/portfolio/mirror-finish-auto-detailing/" target="_blank" rel="noopener">
-        <img class="shot" src="assets/img/folds/mirror-finish-auto-detailing.webp" alt="Mirror Finish Auto Detailing website, first screen on a phone" width="520" height="1125" loading="lazy" decoding="async">
+        <img class="shot" src="assets/img/folds/mirror-finish-auto-detailing.webp" alt="Mirror Finish Auto Detailing website, first screen on a laptop" width="800" height="600" loading="lazy" decoding="async">
         <span class="meta"><strong>Mirror Finish Auto Detailing</strong><span>Auto detailing, Tampa, FL</span></span>
       </a>
       <a class="card" href="https://dunamarketing.com/portfolio/bright-beginnings-preschool/" target="_blank" rel="noopener">
-        <img class="shot" src="assets/img/folds/bright-beginnings-preschool.webp" alt="Bright Beginnings Preschool website, first screen on a phone" width="520" height="1125" loading="lazy" decoding="async">
+        <img class="shot" src="assets/img/folds/bright-beginnings-preschool.webp" alt="Bright Beginnings Preschool website, first screen on a laptop" width="800" height="600" loading="lazy" decoding="async">
         <span class="meta"><strong>Bright Beginnings Preschool</strong><span>Preschool, Fort Wayne, IN</span></span>
       </a>
       <a class="card" href="https://dunamarketing.com/portfolio/marden-estate-law/" target="_blank" rel="noopener">
-        <img class="shot" src="assets/img/folds/marden-estate-law.webp" alt="Marden Estate Law website, first screen on a phone" width="520" height="1125" loading="lazy" decoding="async">
+        <img class="shot" src="assets/img/folds/marden-estate-law.webp" alt="Marden Estate Law website, first screen on a laptop" width="800" height="600" loading="lazy" decoding="async">
         <span class="meta"><strong>Marden Estate Law</strong><span>Estate law, San Diego, CA</span></span>
       </a>
       <a class="card" href="https://dunamarketing.com/portfolio/velvet-fig/" target="_blank" rel="noopener">
-        <img class="shot" src="assets/img/folds/velvet-fig.webp" alt="Velvet Fig website, first screen on a phone" width="520" height="1125" loading="lazy" decoding="async">
+        <img class="shot" src="assets/img/folds/velvet-fig.webp" alt="Velvet Fig website, first screen on a laptop" width="800" height="600" loading="lazy" decoding="async">
         <span class="meta"><strong>Velvet Fig</strong><span>Cocktail bar, New Orleans, LA</span></span>
       </a>
       <a class="card" href="https://dunamarketing.com/portfolio/keyway-locksmith/" target="_blank" rel="noopener">
-        <img class="shot" src="assets/img/folds/keyway-locksmith.webp" alt="Keyway Locksmith website, first screen on a phone" width="520" height="1125" loading="lazy" decoding="async">
+        <img class="shot" src="assets/img/folds/keyway-locksmith.webp" alt="Keyway Locksmith website, first screen on a laptop" width="800" height="600" loading="lazy" decoding="async">
         <span class="meta"><strong>Keyway Locksmith</strong><span>Locksmith, Denver, CO</span></span>
       </a>
       <a class="card" href="https://dunamarketing.com/portfolio/golden-crumb-bakery/" target="_blank" rel="noopener">
-        <img class="shot" src="assets/img/folds/golden-crumb-bakery.webp" alt="Golden Crumb Bakery website, first screen on a phone" width="520" height="1125" loading="lazy" decoding="async">
+        <img class="shot" src="assets/img/folds/golden-crumb-bakery.webp" alt="Golden Crumb Bakery website, first screen on a laptop" width="800" height="600" loading="lazy" decoding="async">
         <span class="meta"><strong>Golden Crumb Bakery</strong><span>Bakery, Petaluma, CA</span></span>
       </a>
       <a class="card" href="https://dunamarketing.com/portfolio/waggin-tails-grooming/" target="_blank" rel="noopener">
-        <img class="shot" src="assets/img/folds/waggin-tails-grooming.webp" alt="Waggin&rsquo; Tails Grooming website, first screen on a phone" width="520" height="1125" loading="lazy" decoding="async">
+        <img class="shot" src="assets/img/folds/waggin-tails-grooming.webp" alt="Waggin&rsquo; Tails Grooming website, first screen on a laptop" width="800" height="600" loading="lazy" decoding="async">
         <span class="meta"><strong>Waggin&rsquo; Tails Grooming</strong><span>Dog grooming, Madison, WI</span></span>
       </a>
       <a class="card" href="https://dunamarketing.com/portfolio/summit-ridge-ski-board/" target="_blank" rel="noopener">
-        <img class="shot" src="assets/img/folds/summit-ridge-ski-board.webp" alt="Summit Ridge Ski &amp; Board website, first screen on a phone" width="520" height="1125" loading="lazy" decoding="async">
+        <img class="shot" src="assets/img/folds/summit-ridge-ski-board.webp" alt="Summit Ridge Ski &amp; Board website, first screen on a laptop" width="800" height="600" loading="lazy" decoding="async">
         <span class="meta"><strong>Summit Ridge Ski &amp; Board</strong><span>Ski and snowboard rentals, Breckenridge, CO</span></span>
       </a>
       <a class="card" href="https://dunamarketing.com/portfolio/maple-street-cleaners/" target="_blank" rel="noopener">
-        <img class="shot" src="assets/img/folds/maple-street-cleaners.webp" alt="Maple Street Cleaners website, first screen on a phone" width="520" height="1125" loading="lazy" decoding="async">
+        <img class="shot" src="assets/img/folds/maple-street-cleaners.webp" alt="Maple Street Cleaners website, first screen on a laptop" width="800" height="600" loading="lazy" decoding="async">
         <span class="meta"><strong>Maple Street Cleaners</strong><span>Dry cleaning, Cincinnati, OH</span></span>
       </a>
     </div>
