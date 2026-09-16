@@ -199,11 +199,19 @@ fbq('track', 'PageView');
   .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 26px; animation: rise 1.2s var(--ease-out) .38s both; }
   .actions > * { pointer-events: auto; }
   /* A dark edge so the control keeps a boundary when a near-white card drifts under it */
-  .cta { min-height: 56px; padding: 0 30px; border: 1.5px solid rgb(5 10 24 / .9); box-shadow: 0 14px 34px rgb(var(--veil) / .55); }
+  .cta { min-height: 58px; padding: 0 9px 0 30px; gap: 16px; border-radius: 999px; border: 1.5px solid rgb(5 10 24 / .9); box-shadow: 0 14px 34px rgb(var(--veil) / .55); }
   .btn-white { background: #fff; color: var(--ground); }
   .btn-white:hover { background: #e9edf5; }
-  .cta svg { width: 19px; height: 19px; flex: none; transition: transform .25s var(--ease-out); }
-  .cta:hover svg, .cta:focus-visible svg { transform: translateY(.18em); }
+  /* The arrow sits in its own dark disc at the end of the pill, and nods so the eye reads "scroll" */
+  .cta .badge {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; border-radius: 50%; flex: none;
+    background: var(--ground); color: #fff;
+    transition: transform .25s var(--ease-out), background-color .2s var(--ease-out);
+  }
+  .cta .badge svg { width: 22px; height: 22px; animation: nod 1.8s ease-in-out infinite; }
+  @keyframes nod { 0%, 100% { transform: translateY(-1px); } 50% { transform: translateY(3px); } }
+  .cta:hover .badge, .cta:focus-visible .badge { transform: scale(1.08); background: #1a2340; }
   @keyframes rise { from { opacity: .15; transform: translateY(.45em); } }
 
   /* Static tilted grid for browsers without WebGL2 */
@@ -230,7 +238,8 @@ fbq('track', 'PageView');
   }
   @media (prefers-reduced-motion: reduce) {
     .brand, .headline > span, .sub, .actions { animation: none; }
-    .cta, .cta svg { transition: none; }
+    .cta, .cta .badge { transition: none; }
+    .cta .badge svg { animation: none; }
   }
 
   /* ---------- Sections ---------- */
@@ -344,7 +353,7 @@ fbq('track', 'PageView');
       <p class="sub">Answer one questionnaire. See your finished site tomorrow. Pay only if you love it.</p>
     </div>
     <div class="actions">
-      <a class="btn btn-white cta" id="hero-cta" href="#before-you-pay">Get started<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+      <a class="btn btn-white cta" id="hero-cta" href="#before-you-pay">Get started<span class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M5 12l7 7 7-7"/></svg></span></a>
     </div>
     <p class="visually-hidden" id="sites"></p>
   </div>
